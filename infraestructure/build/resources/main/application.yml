@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: projecttest
+  datasource:
+    url: jdbc:h2:mem:projectdb
+    driverClassName: org.h2.Driver
+    username: proyect
+    password: f87185df-c381-407f-88b6-a157599896d4
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+  h2:
+    console:
+      enabled: true
+
+server:
+  port: 8080
