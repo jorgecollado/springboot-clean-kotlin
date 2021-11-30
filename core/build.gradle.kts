@@ -1,4 +1,6 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.gradle.api.tasks.bundling.Jar
+import org.springframework.boot.gradle.tasks.bundling.BootJar
 
 plugins {
     id("org.springframework.boot") version "2.4.4"
@@ -9,6 +11,14 @@ plugins {
     kotlin("plugin.jpa") version "1.6.0"
     kotlin("kapt") version "1.6.0"
 }
+
+
+val jar: Jar by tasks
+val bootJar: BootJar by tasks
+
+bootJar.enabled = false
+jar.enabled = true
+
 
 group = "com.example"
 version = "0.0.1-SNAPSHOT"
